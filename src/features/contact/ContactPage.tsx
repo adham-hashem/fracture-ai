@@ -152,11 +152,11 @@ const ContactPage = () => {
             </li>
             <li className="mb-2">
               <i className="fas fa-phone mr-2" style={{ color: "#FF8080" }}></i>
-              <strong>Phone:</strong> +123-456-7890
+              <strong>Phone:</strong> +201028110927
             </li>
             <li className="mb-2">
               <i className="fas fa-map-marker-alt mr-2" style={{ color: "#FF8080" }}></i>
-              <strong>Address:</strong> 123 AI Innovation Street, Tech City, Country
+              <strong>Address:</strong> New Damietta, Damietta, Egypt
             </li>
           </ul>
         </section>
