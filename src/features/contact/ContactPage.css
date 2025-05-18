@@ -1,0 +1,45 @@
+@import "../css/style.css";
+
+.list-unstyled li {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.list-unstyled li:hover {
+  transform: translateX(10px);
+  color: #FF8080;
+}
+
+h6, h2 {
+  color: #F5F6F5;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+h6:hover, h2:hover {
+  color: #FF8080;
+}
+
+p, .lead {
+  color: #F5F6F5;
+  font-family: 'Inter', system-ui, sans-serif;
+  transition: opacity 0.3s ease;
+}
+
+p:hover, .lead:hover {
+  opacity: 0.8;
+}
+
+.fas {
+  transition: transform 0.3s ease;
+}
+
+.fas:hover {
+  transform: scale(1.2);
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  background: rgba(245, 246, 245, 0.2);
+  box-shadow: 0 0 10px rgba(255, 128, 128, 0.5);
+}

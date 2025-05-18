@@ -1,0 +1,138 @@
+@import "../css/style.css";
+
+.main-content {
+  height: calc(100vh - 50px);
+  background: linear-gradient(135deg, #0A4D68 60%, #FF8080 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.main-content-h1 {
+  color: #F5F6F5;
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-family: 'Inter', system-ui, sans-serif;
+  animation: fadeIn 1s ease-in;
+}
+
+.main-content-h1-container {
+  border-right: 2px solid #FF8080;
+  width: fit-content;
+  animation: blinkCursor 0.8s infinite;
+}
+
+.main-content-p {
+  color: #F5F6F5;
+  margin: 20px 15% 40px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.button-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-grad {
+  background: linear-gradient(to right, #FF8080 0%, #6B7280 51%, #0A4D68 100%);
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background-position 0.5s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  background-size: 200% auto;
+  color: #F5F6F5;
+  box-shadow: 0 0 10px rgba(255, 128, 128, 0.5);
+  border-radius: 8px;
+  display: inline-block;
+  font-weight: 500;
+  font-family: 'Inter', system-ui, sans-serif;
+  text-decoration: none;
+}
+
+.btn-grad:hover {
+  background-position: right center;
+  color: #F5F6F5;
+  text-decoration: none;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 128, 128, 0.8);
+}
+
+.learn-more-button {
+  background-color: #FF8080;
+  color: #F5F6F5;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border-radius: 8px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 500;
+}
+
+.learn-more-button:hover {
+  background-color: #0A4D68;
+  color: #F5F6F5;
+  text-decoration: none;
+  transform: scale(1.05);
+}
+
+.empowering-section {
+  background: rgba(245, 246, 245, 0.05);
+  border: 1px solid rgba(255, 128, 128, 0.3);
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  background: rgba(245, 246, 245, 0.2);
+  box-shadow: 0 0 10px rgba(255, 128, 128, 0.5);
+}
+
+.rounded-div {
+  border-radius: 12px;
+}
+
+@keyframes blinkCursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content-h1 {
+    font-size: 2.5rem;
+  }
+  .main-content-p {
+    margin: 20px 10% 30px;
+    font-size: 1rem;
+  }
+  .button-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .btn-grad {
+    padding: 10px 30px;
+  }
+  .empowering-section {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+}
