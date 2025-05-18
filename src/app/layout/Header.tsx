@@ -8,7 +8,6 @@ function Header() {
   const navbarRef = useRef<HTMLDivElement>(null);
   const navItemsRef = useRef<HTMLLIElement[]>([]);
   const brandRef = useRef<HTMLAnchorElement>(null);
-  const contactButtonRef = useRef<HTMLAnchorElement>(null);
 
   // Add refs to nav items
   const addToNavItemsRef = (el: HTMLLIElement | null) => {
@@ -42,22 +41,6 @@ function Header() {
         }
       );
     }
-
-    // Animate contact button
-    if (contactButtonRef.current) {
-      gsap.fromTo(
-        contactButtonRef.current,
-        { opacity: 0, scale: 0.8, y: 10 },
-        {
-          opacity: 1,
-          scale: 1,
-          y: 0,
-          duration: 0.8,
-          ease: "back.out(1.7)",
-          delay: 0.5,
-        }
-      );
-    }
   }, []);
 
   return (
@@ -82,7 +65,7 @@ function Header() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div
-          className="collapse navbar-collapse justify-content-between"
+          className="collapse navbar-collapse"
           id="mynavbar"
         >
           <ul className="navbar-nav">
@@ -101,16 +84,12 @@ function Header() {
                 Fracture Detection
               </Link>
             </li>
+            <li className="nav-item" ref={addToNavItemsRef}>
+              <Link className="nav-link" to="/contact">
+                Contact
+              </Link>
+            </li>
           </ul>
-          <div className="contact-button-container">
-            <Link
-              ref={contactButtonRef}
-              className="btn contact-us-button"
-              to="/contact"
-            >
-              <i className="fas fa-envelope me-2"></i>Contact Us
-            </Link>
-          </div>
         </div>
       </div>
     </nav>

@@ -22,9 +22,7 @@
 }
 
 .main-content-h1-container {
-  border-right: 2px solid #FF8080;
   width: fit-content;
-  animation: blinkCursor 0.8s infinite;
 }
 
 .main-content-p {
@@ -97,12 +95,6 @@
 
 .rounded-div {
   border-radius: 12px;
-}
-
-@keyframes blinkCursor {
-  50% {
-    border-color: transparent;
-  }
 }
 
 @keyframes fadeIn {

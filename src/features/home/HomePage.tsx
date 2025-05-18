@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -12,9 +12,6 @@ import "./HomePage.css";
 gsap.registerPlugin(ScrollTrigger);
 
 const HomePage: React.FC = () => {
-  const [typedText, setTypedText] = useState("");
-  const text = "FractureAI";
-  const speed = 100;
   const containerRef = useRef<HTMLDivElement>(null);
   const [containerHeight, setContainerHeight] = useState(0);
   const mainContentRef = useRef<HTMLDivElement>(null);
@@ -53,19 +50,6 @@ const HomePage: React.FC = () => {
     updateHeight();
     window.addEventListener("resize", updateHeight);
     return () => window.removeEventListener("resize", updateHeight);
-  }, []);
-
-  // Typing animation for header text
-  useEffect(() => {
-    let index = 0;
-    const interval = setInterval(() => {
-      setTypedText(text.slice(0, index + 1));
-      index++;
-      if (index === text.length) {
-        clearInterval(interval);
-      }
-    }, speed);
-    return () => clearInterval(interval);
   }, []);
 
   // GSAP animations
@@ -182,7 +166,7 @@ const HomePage: React.FC = () => {
         <div className="main-content" ref={mainContentRef}>
           <div className="main-content-h1-container">
             <h1 className="main-content-h1">
-              {typedText.split("Fracture").map((part, i, arr) => (
+              {"FractureAI".split("Fracture").map((part, i, arr) => (
                 <React.Fragment key={i}>
                   {part}
                   {i < arr.length - 1 && (
