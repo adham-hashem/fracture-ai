@@ -1,7 +1,7 @@
 @import "../css/bootstrap.min.css";
 
 :root {
-    --main-color: #706CEE;
+    --main-color: #FF8080;
     /* --main-color: #6E7EE8; */
     --main-background-color: #1A1A1A;
     --div-background-color: #282828;
@@ -14,7 +14,7 @@
 
 .learn-more-button:hover {
     background-color: white;
-    color: #706CEE;
+    color: #FF8080;
 }
 
 .prevButton {
@@ -42,11 +42,11 @@
 }
 
 .main-color {
-    color: #706CEE;
+    color: #FF8080;
 }
 
 .main-color-background {
-    background-color: #706CEE;
+    background-color: #FF8080;
 }
 
 .main-background-color {
